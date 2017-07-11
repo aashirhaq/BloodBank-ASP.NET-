@@ -1,0 +1,44 @@
+﻿@model BloodBank.Models.DonorData
+@{
+    ViewBag.Title = "UpdateDonorData";
+}
+
+<h2>UpdateDonorData</h2>
+
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.DonorID)</th>
+            <td>@Html.DisplayTextFor(m => m.DonorID)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.FullName)</th>
+            <td>@Html.TextBoxFor(m => m.FullName)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Gender)</th>
+            <td>@Html.TextBoxFor(m => m.Gender)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Address)</th>
+            <td>@Html.TextBoxFor(m => m.Address)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.ContactNumber)</th>
+            <td>@Html.TextBoxFor(m => m.ContactNumber)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.BloodGroup)</th>
+            <td>@Html.TextBoxFor(m => m.BloodGroup)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.DateOfBirth)</th>
+            <td>@Html.TextBoxFor(m => m.DateOfBirth)</td>
+        </tr>
+
+    </table>
+    <br />
+    <input type="submit" value="Update Record" class="btn-success" />
+}

@@ -1,0 +1,51 @@
+﻿@model List<BloodBank.Models.DonorData>
+@{
+    ViewBag.Title = "Index";
+}
+@{ 
+    if(Session["Username"] != null)
+    {
+        <h3>Welcome @Session["Username"].ToString() to the Blood Bank</h3>
+    }
+    else
+    {
+        <h3>Welcome to Blood Bank</h3>
+    }
+}
+
+<a href="@Url.Action("Create", "Home")">Register Donor Detail</a>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+                <th>Blood Group</th>
+                <th>date Of Birth</th>
+            </tr>
+        </thead>
+        @{
+            foreach (var s in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@s.DonorID</td>
+                        <td>@s.FullName</td>
+                        <td>@s.Gender</td>
+                        <td>@s.Address</td>
+                        <td>@s.ContactNumber</td>
+                        <td>@s.BloodGroup</td>
+                        <td>@s.DateOfBirth</td>
+
+                    </tr>
+                </tbody>
+
+            }
+        }
+
+    </table>
+</div>
+

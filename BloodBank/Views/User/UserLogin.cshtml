@@ -1,0 +1,26 @@
+﻿@model BloodBank.Models.UserData
+@{
+    ViewBag.Title = "UserLogin";
+}
+
+<h2>UserLogin</h2>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+
+    <div class="center">
+    <div>
+        <br />
+        <form>
+            <input type="text" name="Username" placeholder="Username" required="required" /><br /><br />
+            <input type="password" name="Password" placeholder="Password" required="required" /><br /><br />
+            <input type="submit" value="Let me in" />
+        </form>
+    </div>
+        <br />
+    <div>
+        @Html.ActionLink("Create account", "CreateAccount", "User")
+    </div>
+
+    </div>
+}

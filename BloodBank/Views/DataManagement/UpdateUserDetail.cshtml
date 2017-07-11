@@ -1,0 +1,39 @@
+﻿@model BloodBank.Models.UserData
+@{
+    ViewBag.Title = "UpdateUserDetail";
+}
+
+<h2>UpdateUserDetail</h2>
+
+@using (Html.BeginForm())
+{
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Id)</th>
+        <td>@Html.DisplayTextFor(m => m.Id)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.FirstName)</th>
+        <td>@Html.TextBoxFor(m => m.FirstName)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.LastName)</th>
+        <td>@Html.TextBoxFor(m => m.LastName)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Username)</th>
+        <td>@Html.TextBoxFor(m => m.Username)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.EmailAddress)</th>
+        <td>@Html.TextBoxFor(m => m.EmailAddress)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.Password)</th>
+        <td>@Html.TextBoxFor(m => m.Password)</td>
+    </tr>
+   
+</table>
+<br />
+    <input type="submit" value="Update Record" class="btn-success"/>
+}

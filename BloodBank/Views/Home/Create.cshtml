@@ -1,0 +1,50 @@
+﻿@model BloodBank.Models.DonorData
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.FullName)</th>
+            <td>@Html.TextBoxFor(m => m.FullName)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Gender)</th>
+            <td>
+                @{
+                    List<SelectListItem> glistItems = new List<SelectListItem>();
+                    glistItems.Add(new SelectListItem { Text = "Male", Value = "Male" });
+                    glistItems.Add(new SelectListItem { Text = "Female", Value = "Female" });
+                    glistItems.Add(new SelectListItem { Text = "Other", Value = "Other" });
+                }
+                @Html.DropDownListFor(model => model.Gender, glistItems, "-- Select Gender --")
+
+            </td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Address)</th>
+            <td>@Html.TextBoxFor(m => m.Address)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.ContactNumber)</th>
+            <td>@Html.TextBoxFor(m => m.ContactNumber)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.BloodGroup)</th>
+            <td>@Html.TextBoxFor(m => m.BloodGroup)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.DateOfBirth)</th>
+            <td>@Html.TextBoxFor(m => m.DateOfBirth) (dd-mm-yyy)</td>
+        </tr>
+  
+    </table>
+    <br />
+    <input type="submit" value="Add Record" class="btn-success"/>
+
+ }

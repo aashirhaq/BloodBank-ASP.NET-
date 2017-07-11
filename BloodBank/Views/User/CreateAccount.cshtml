@@ -1,0 +1,37 @@
+﻿@model BloodBank.Models.UserData
+@{
+    ViewBag.Title = "CreateAccount";
+}
+
+<h2>CreateAccount</h2>
+
+@using (Html.BeginForm())
+{
+
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.FirstName)</th>
+            <td>@Html.TextBoxFor(m => m.FirstName)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.LastName)</th>
+            <td>@Html.TextBoxFor(m => m.LastName)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Username)</th>
+            <td>@Html.TextBoxFor(m => m.Username)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.EmailAddress)</th>
+            <td>@Html.TextBoxFor(m=>m.EmailAddress)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Password)</th>
+            <td>@Html.PasswordFor(m => m.Password)</td>
+        </tr>
+
+    </table>
+    <br />
+    <input type="submit" value="Create" class="btn-success" />
+
+                    }
