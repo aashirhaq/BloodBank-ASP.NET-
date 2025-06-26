@@ -1,2 +1,66 @@
-packages
-BloodBank/bin
+## Build results
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.app
+*.ipa
+*.log
+
+## VS Code / Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+## DotCover
+.idea/
+*.dotCover
+
+## Rider
+.idea/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+*.nupkg.sha512
+
+## Backup files
+*~
+*.bak
+*.old
+*.orig
+
+## Publish results
+publish/
+*.publishproj
+
+## Logs
+*.log
+
+## Others
+_ReSharper*/
+*.sln.docstates
+*.sqlite
+*.db
