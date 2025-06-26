@@ -1,0 +1,22 @@
+# Treat these folders as vendor (do not include in language statistics)
+bin/** linguist-vendored
+obj/** linguist-vendored
+packages/** linguist-vendored
+.vs/** linguist-vendored
+
+# If using wwwroot or publish folders (ASP.NET-specific), ignore them
+wwwroot/** linguist-vendored
+publish/** linguist-vendored
+
+# Optional: force .cs files to be recognized as C#
+*.cs linguist-language=C#
+
+# Optional: treat config files (optional)
+*.config linguist-documentation
+*.json linguist-data
+*.xml linguist-data
+
+# Optional: include only C# files for language stats (experimental)
+# Exclude all other text files
+*.md linguist-documentation
+*.txt linguist-documentation
